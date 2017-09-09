@@ -8,7 +8,6 @@ by [Michael Hartl](http://www.michaelhartl.com/). Hello, world!
 
 
 
-
 # Hroku upload
 
 $ heroku login
@@ -28,13 +27,15 @@ Creating app... done, ⬢ still-beyond-43032
 https://still-beyond-43032.herokuapp.com/ | https://git.heroku.com/still-beyond-43032.git
 アプリ名：still-beyond-43032
 
+$ heroku addons:add cleardb
+
 $ heroku config | grep CLEARDB_DATABASE_URL
 
 $ heroku addons:detach DATABASE -a still-beyond-43032
 
 $ heroku config:add DATABASE_URL='mysql2://xxxxxxxxx'
 
-$ heroku config 
+$ heroku config
 
 $ git push heroku master
 
